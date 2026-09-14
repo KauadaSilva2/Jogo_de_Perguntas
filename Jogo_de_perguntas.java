@@ -9,6 +9,7 @@
             int resposta;
             int ponto = 0;
             int erro = 0;
+            int total_resposta = 0;
 
             do{
                     System.out.println("1 - Qual é a capital do brasil?");
@@ -25,15 +26,18 @@
                 break;
                 case 2:
                     System.out.println("Errou");
+                    erro++;
                 break;
                 case 3:
                     System.out.println("Errou");
+                    erro++;
                 break;
                 default:
                     System.out.println("Opção inválida, tente novamente!!");
             }
-        }   while(resposta >= 4);
+        }   while(resposta >= 4 || resposta <= 0);
 
+        do{
             System.out.println("2 - Quem era Julio Cesar");
             System.out.println("1. Imperador");
             System.out.println("2. Ditador");
@@ -41,14 +45,25 @@
 
             resposta = sc.nextInt();
 
-            if(resposta == 1){
-                System.out.println("Acertou");
-                ponto++;
-            } else {
-                System.out.println("Errou");
-                erro++;
+            switch(resposta){
+                case 1:
+                    System.out.println("Acertou");
+                    ponto++;
+                break;
+                case 2:
+                    System.out.println("Errou");
+                    erro++;
+                break;
+                case 3:
+                    System.out.println("Errou");
+                    erro++;
+                break;
+                default:
+                    System.out.println("Opção inválida, tente novamente!!");
             }
+        }   while(resposta >= 4 || resposta <= 0);
 
+        do{
             System.out.println("3 - Em que ano o Flamengo foi treinado pelo JJ");
             System.out.println("1. 2018");
             System.out.println("2. 2022");
@@ -56,17 +71,25 @@
 
             resposta = sc.nextInt();
 
-            if(resposta == 3){
-                System.out.println("Acertou");
-                ponto++;
-            } else{
-                System.out.println("Errou");
-                erro++;
+            switch(resposta){
+                case 1:
+                    System.out.println("Errou");
+                    erro++;
+                break;
+                case 2:
+                    System.out.println("Errou");
+                    erro++;
+                break;
+                case 3:
+                    System.out.println("Acertou");
+                    ponto++;
+                break;
+                default:
+                    System.out.println("Opção inválida, tente novamente!!");
             }
+        }   while(resposta >= 4 || resposta <= 0);
 
-
-
-            resposta = ponto + erro;
+            total_resposta = ponto + erro;
 
             System.out.println("");
 
@@ -74,7 +97,7 @@
 
             System.out.println("Você tem " + ponto + " ponto(s)");
             System.out.println("Você tem " + erro + " erro(s)");
-            System.out.println("Perguntas totais " + resposta);
+            System.out.println("Perguntas totais " + total_resposta);
 
             System.out.println("");
 
