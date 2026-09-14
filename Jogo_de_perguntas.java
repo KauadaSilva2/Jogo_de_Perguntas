@@ -136,6 +136,20 @@
             temp = pontos[0];
             pontos[0] = pontos[1];
             pontos[1] = temp;
+
+            } else if(pontos[1] < pontos[2]){
+
+            names = nomes[1];
+            nomes[1] = nomes[2];
+            nomes[2] = names;
+
+            temp = pontos[1];
+            pontos[1] = pontos[2];
+            pontos[2] = temp;
+            }
+
+            if(pontos[1]){
+
             }
         }
     }
