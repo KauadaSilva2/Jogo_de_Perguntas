@@ -5,15 +5,17 @@
             Scanner sc = new Scanner(System.in);
 
             System.out.println("====Jogo de respostas====");
-            int ponto = 0;
             int resposta;
             int[] pontos = new int[3];
-            int erro = 0;
             int total_resposta = 0;
             int jogador = 0;
             String[] nomes = new String[3] ;
+            int temp;
+            String names;
 
             do{
+            int ponto = 0;
+            int erro = 0;
             System.out.println("Digite seu nome: ");
             nomes[jogador] = sc.next();
 
@@ -103,6 +105,7 @@
 
             System.out.println("");
 
+
             System.out.println("====Resultado====");
 
             System.out.println("Você tem " + ponto + " ponto(s)");
@@ -120,5 +123,21 @@
             jogador++;
         } while(jogador < 3);
             System.out.println("===Ranking===");
+            for(int i = 0; i < 3; i++){
+                System.out.println(pontos[i]);
+                System.out.println(nomes[i]);
+            }
+
+            temp = pontos[0];
+            pontos[0] = pontos[1];
+            pontos[1] = temp;
+
+            names = nomes[0];
+            nomes[0] = nomes[1];
+            nomes[1] = names;
+
+            if(pontos[0] < pontos[1]){
+                
+            }
         }
     }
