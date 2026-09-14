@@ -13,10 +13,9 @@
             int jogador = 0;
             String[] nomes = new String[3] ;
 
+            do{
             System.out.println("Digite seu nome: ");
             nomes[jogador] = sc.next();
-            jogador++;
-            pontos[jogador] = ponto;
 
             do{
                     System.out.println("1 - Qual é a capital do brasil?");
@@ -94,7 +93,11 @@
                 default:
                     System.out.println("Opção inválida, tente novamente!!");
             }
+
         }   while(resposta >= 4 || resposta <= 0);
+
+            pontos[jogador] = ponto;
+
 
             total_resposta = ponto + erro;
 
@@ -114,8 +117,8 @@
                 System.out.println("PQP em " + nomes[jogador]);
             }
 
+            jogador++;
+        } while(jogador < 3);
             System.out.println("===Ranking===");
-            System.out.println("1. " + nomes[jogador]);
-
         }
     }
