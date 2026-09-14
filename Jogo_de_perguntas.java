@@ -128,16 +128,14 @@
                 System.out.println(nomes[i]);
             }
 
-            temp = pontos[0];
-            pontos[0] = pontos[1];
-            pontos[1] = temp;
-
+            if(pontos[0] < pontos[1]){
             names = nomes[0];
             nomes[0] = nomes[1];
             nomes[1] = names;
 
-            if(pontos[0] < pontos[1]){
-                
+            temp = pontos[0];
+            pontos[0] = pontos[1];
+            pontos[1] = temp;
             }
         }
     }
