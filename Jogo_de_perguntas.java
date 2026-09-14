@@ -10,6 +10,10 @@
             int ponto = 0;
             int erro = 0;
             int total_resposta = 0;
+            String nome;
+
+            System.out.println("Digite seu nome: ");
+            nome = sc.next();
 
             do{
                     System.out.println("1 - Qual é a capital do brasil?");
@@ -102,9 +106,9 @@
             System.out.println("");
 
             if(ponto >= 2){
-                System.out.println("Fez o minimo esperado");
+                System.out.println("Fez o minimo esperado " + nome);
             } else{
-                System.out.println("PQP");
+                System.out.println("PQP em " + nome);
             }
         }
     }
