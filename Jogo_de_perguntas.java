@@ -5,15 +5,18 @@
             Scanner sc = new Scanner(System.in);
 
             System.out.println("====Jogo de respostas====");
-
-            int resposta;
             int ponto = 0;
+            int resposta;
+            int[] pontos = new int[3];
             int erro = 0;
             int total_resposta = 0;
-            String nome;
+            int jogador = 0;
+            String[] nomes = new String[3] ;
 
             System.out.println("Digite seu nome: ");
-            nome = sc.next();
+            nomes[jogador] = sc.next();
+            jogador++;
+            pontos[jogador] = ponto;
 
             do{
                     System.out.println("1 - Qual é a capital do brasil?");
@@ -106,9 +109,13 @@
             System.out.println("");
 
             if(ponto >= 2){
-                System.out.println("Fez o minimo esperado " + nome);
+                System.out.println("Fez o minimo esperado " + nomes[jogador]);
             } else{
-                System.out.println("PQP em " + nome);
+                System.out.println("PQP em " + nomes[jogador]);
             }
+
+            System.out.println("===Ranking===");
+            System.out.println("1. " + nomes[jogador]);
+
         }
     }
