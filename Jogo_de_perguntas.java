@@ -148,8 +148,10 @@
             pontos[2] = temp;
             }
 
-            if(pontos[1]){
-
+            if(pontos[2] < pontos[3]){
+                names = nomes[2];
+                nomes[2] = nomes[3];
+                nomes[3] = names;
             }
         }
     }
